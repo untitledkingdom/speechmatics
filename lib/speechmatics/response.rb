@@ -17,9 +17,9 @@ module Speechmatics
       when "2"
         # puts "all is well, status: #{response.status}"
       when "4", "5"
-        raise "Whoops, error back from Speechmatics: #{response.status}"
+        raise "Whoops, error back from Speechmatics: #{response.status} #{response.body}"
       else
-        raise "Unrecongized status code: #{response.status}"
+        raise "Unrecongized status code: #{response.status} #{response.body}"
       end
     end
 
